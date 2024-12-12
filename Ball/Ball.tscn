@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://dmgcknjh6o3dq"]
+
+[ext_resource type="Script" path="res://Ball/Ball.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://ksi5igdmqc2e" path="res://Assets/bubble.png" id="2"]
+
+[sub_resource type="PhysicsMaterial" id="1"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="Gradient" id="Gradient_g576d"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.552941)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3unve"]
+gradient = SubResource("Gradient_g576d")
+width = 2048
+
+[sub_resource type="Curve" id="4"]
+min_value = -0.54
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.517949, -0.54), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="5"]
+width = 2048
+curve = SubResource("4")
+
+[sub_resource type="ParticleProcessMaterial" id="8"]
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 300.0
+angular_velocity_min = 150.0
+angular_velocity_max = 200.0
+orbit_velocity_min = 2.5
+orbit_velocity_max = 3.5
+scale_min = 0.25
+scale_max = 0.4
+color_ramp = SubResource("GradientTexture1D_3unve")
+hue_variation_min = -0.5
+hue_variation_max = 0.5
+hue_variation_curve = SubResource("5")
+
+[sub_resource type="RectangleShape2D" id="9"]
+size = Vector2(16, 16)
+
+[node name="Ball" type="RigidBody2D"]
+physics_material_override = SubResource("1")
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 3
+process_material = SubResource("8")
+texture = ExtResource("2")
+lifetime = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("9")
+
+[node name="Color" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(8, 8)

@@ -1,0 +1,341 @@
+[gd_scene load_steps=2 format=3 uid="uid://xfx8suncp17d"]
+
+[ext_resource type="Script" path="res://HUD/HUD.gd" id="1"]
+
+[node name="HUD" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 1035.0
+offset_bottom = 778.0
+color = Color(0, 0, 0, 0.862745)
+
+[node name="Menu_Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 1010.0
+offset_bottom = 510.0
+color = Color(0.286275, 0.313726, 0.341176, 0.752941)
+
+[node name="Menu" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 90.0
+offset_bottom = 90.0
+
+[node name="Color" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="Color_Paddle" type="CheckBox" parent="Menu/Color"]
+layout_mode = 0
+offset_right = 126.419
+offset_bottom = 26.4193
+text = "Colored Paddle"
+
+[node name="Color_Ball" type="CheckBox" parent="Menu/Color"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 126.419
+offset_bottom = 56.4193
+text = "Colored Ball"
+
+[node name="Color_Blocks" type="CheckBox" parent="Menu/Color"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 126.419
+offset_bottom = 86.4193
+text = "Colored Blocks"
+
+[node name="Color_Background" type="CheckBox" parent="Menu/Color"]
+layout_mode = 0
+offset_top = 90.0
+offset_right = 155.0
+offset_bottom = 116.419
+text = "Colored Background"
+
+[node name="Particles" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 200.0
+offset_right = 10.0
+offset_bottom = 200.0
+
+[node name="Particle_Paddle" type="CheckBox" parent="Menu/Particles"]
+layout_mode = 0
+text = "Particle Paddle"
+
+[node name="Particle_Blocks" type="CheckBox" parent="Menu/Particles"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 122.0
+offset_bottom = 54.0
+text = "Particle Blocks"
+
+[node name="Particle_Walls" type="CheckBox" parent="Menu/Particles"]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 115.0
+offset_bottom = 84.0
+text = "Particle Walls"
+
+[node name="Particle_Ball" type="CheckBox" parent="Menu/Particles"]
+layout_mode = 0
+offset_top = 90.0
+offset_right = 115.0
+offset_bottom = 114.0
+text = "Particle Ball"
+
+[node name="Blocks" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 300.0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 10.0
+
+[node name="Blocks_Appear" type="CheckBox" parent="Menu/Blocks"]
+layout_mode = 0
+offset_right = 136.419
+offset_bottom = 36.4193
+text = "Blocks Appear"
+
+[node name="Blocks_Fall" type="CheckBox" parent="Menu/Blocks"]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 134.0
+offset_bottom = 67.0
+text = "Blocks Fall"
+
+[node name="Blocks_Fade" type="CheckBox" parent="Menu/Blocks"]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 157.0
+offset_bottom = 102.0
+text = "Blocks Fade"
+
+[node name="Blocks_Rotate" type="CheckBox" parent="Menu/Blocks"]
+layout_mode = 0
+offset_top = 110.0
+offset_right = 157.0
+offset_bottom = 142.0
+text = "Blocks Rotate"
+
+[node name="Screen_Shake" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 300.0
+offset_top = 200.0
+offset_right = 340.0
+offset_bottom = 240.0
+
+[node name="Screen_Shake_Paddle_Label" type="Label" parent="Menu/Screen_Shake"]
+layout_mode = 0
+offset_left = 30.0
+offset_right = 119.0
+offset_bottom = 14.0
+text = "Screen Shake Paddle"
+
+[node name="Screen_Shake_Paddle" type="HSlider" parent="Menu/Screen_Shake"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 125.0
+offset_bottom = 36.0
+
+[node name="Screen_Shake_Blocks_Label" type="Label" parent="Menu/Screen_Shake"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 60.0
+offset_right = 161.0
+offset_bottom = 74.0
+text = "Screen Shake Blocks"
+
+[node name="Screen_Shake_Blocks" type="HSlider" parent="Menu/Screen_Shake"]
+layout_mode = 0
+offset_left = 5.5
+offset_top = 80.0
+offset_right = 125.5
+offset_bottom = 96.0
+
+[node name="Screen_Shake_Walls_Label" type="Label" parent="Menu/Screen_Shake"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 120.0
+offset_right = 161.0
+offset_bottom = 151.0
+text = "Screen Shake Walls"
+
+[node name="Screen_Shake_Walls" type="HSlider" parent="Menu/Screen_Shake"]
+layout_mode = 0
+offset_left = 5.5
+offset_top = 140.0
+offset_right = 125.5
+offset_bottom = 156.0
+
+[node name="Ball" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 550.0
+offset_top = 200.0
+offset_right = 550.0
+offset_bottom = 200.0
+
+[node name="Ball_Trail" type="CheckBox" parent="Menu/Ball"]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 146.419
+offset_bottom = 36.4193
+text = "Ball Trail"
+
+[node name="Impact_Ball" type="CheckBox" parent="Menu/Ball"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 27.0
+offset_right = 146.419
+offset_bottom = 63.4193
+text = "Ball Impact"
+
+[node name="Paddle" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 550.0
+offset_top = 10.0
+offset_right = 550.0
+offset_bottom = 10.0
+
+[node name="Paddle_Appear" type="CheckBox" parent="Menu/Paddle"]
+layout_mode = 0
+offset_right = 136.419
+offset_bottom = 36.4193
+text = "Paddle Appears"
+
+[node name="Paddle_Stretch" type="CheckBox" parent="Menu/Paddle"]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 134.0
+offset_bottom = 67.0
+text = "Paddle Stretches"
+
+[node name="Audio" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 800.0
+offset_top = 10.0
+offset_right = 800.0
+offset_bottom = 10.0
+
+[node name="Audio_music" type="CheckBox" parent="Menu/Audio"]
+layout_mode = 0
+offset_right = 136.419
+offset_bottom = 36.4193
+text = "Music"
+
+[node name="Audio_effects" type="CheckBox" parent="Menu/Audio"]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 135.0
+offset_bottom = 67.0
+text = "Sound Effects"
+
+[node name="Effects" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 800.0
+offset_top = 200.0
+offset_right = 800.0
+offset_bottom = 200.0
+
+[node name="Effects_blur" type="CheckBox" parent="Menu/Effects"]
+layout_mode = 0
+offset_right = 136.419
+offset_bottom = 36.4193
+text = "Effects: blur"
+
+[node name="Face" type="Control" parent="Menu"]
+anchors_preset = 0
+offset_left = 800.0
+offset_top = 363.0
+offset_right = 840.0
+offset_bottom = 403.0
+
+[node name="Paddle_Eyes" type="CheckBox" parent="Menu/Face"]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 135.0
+offset_bottom = 35.0
+text = "Paddle Eyes"
+
+[node name="Paddle_Mouth" type="CheckBox" parent="Menu/Face"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 135.0
+offset_bottom = 62.0
+text = "Paddle Mouth"
+
+[node name="All Off" type="Button" parent="Menu"]
+layout_mode = 0
+offset_top = 650.0
+offset_right = 80.0
+offset_bottom = 680.0
+text = "All Off"
+
+[node name="All On" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 650.0
+offset_right = 180.0
+offset_bottom = 680.0
+text = "All On"
+
+[node name="Restart" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 650.0
+offset_right = 780.0
+offset_bottom = 680.0
+text = "Restart"
+
+[node name="Quit" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 650.0
+offset_right = 880.0
+offset_bottom = 680.0
+text = "Quit"
+
+[connection signal="toggled" from="Menu/Color/Color_Paddle" to="." method="_on_Color_Paddle_toggled"]
+[connection signal="toggled" from="Menu/Color/Color_Ball" to="." method="_on_Color_Ball_toggled"]
+[connection signal="toggled" from="Menu/Color/Color_Blocks" to="." method="_on_Color_Blocks_toggled"]
+[connection signal="toggled" from="Menu/Color/Color_Background" to="." method="_on_Color_Background_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Paddle" to="." method="_on_Particle_Paddle_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Blocks" to="." method="_on_Particle_Blocks_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Walls" to="." method="_on_Particle_Walls_toggled"]
+[connection signal="toggled" from="Menu/Particles/Particle_Ball" to="." method="_on_Particle_Ball_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Appear" to="." method="_on_Blocks_Appear_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Fall" to="." method="_on_Blocks_Fall_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Fade" to="." method="_on_Blocks_Fade_toggled"]
+[connection signal="toggled" from="Menu/Blocks/Blocks_Rotate" to="." method="_on_Blocks_Rotate_toggled"]
+[connection signal="value_changed" from="Menu/Screen_Shake/Screen_Shake_Paddle" to="." method="_on_Screen_Shake_Paddle_value_changed"]
+[connection signal="value_changed" from="Menu/Screen_Shake/Screen_Shake_Blocks" to="." method="_on_Screen_Shake_Blocks_value_changed"]
+[connection signal="value_changed" from="Menu/Screen_Shake/Screen_Shake_Walls" to="." method="_on_Screen_Shake_Walls_value_changed"]
+[connection signal="toggled" from="Menu/Ball/Ball_Trail" to="." method="_on_Ball_Trail_toggled"]
+[connection signal="toggled" from="Menu/Ball/Impact_Ball" to="." method="_on_Impact_Ball_toggled"]
+[connection signal="toggled" from="Menu/Paddle/Paddle_Appear" to="." method="_on_Paddle_Appear_toggled"]
+[connection signal="toggled" from="Menu/Paddle/Paddle_Stretch" to="." method="_on_Paddle_Stretch_toggled"]
+[connection signal="toggled" from="Menu/Audio/Audio_music" to="." method="_on_Audio_music_toggled"]
+[connection signal="toggled" from="Menu/Audio/Audio_effects" to="." method="_on_Audio_effects_toggled"]
+[connection signal="toggled" from="Menu/Effects/Effects_blur" to="." method="_on_Effects_blur_toggled"]
+[connection signal="toggled" from="Menu/Face/Paddle_Eyes" to="." method="_on_Paddle_Eyes_toggled"]
+[connection signal="toggled" from="Menu/Face/Paddle_Mouth" to="." method="_on_Paddle_Mouth_toggled"]
+[connection signal="pressed" from="Menu/All Off" to="." method="_on_All_Off_pressed"]
+[connection signal="pressed" from="Menu/All On" to="." method="_on_All_On_pressed"]
+[connection signal="pressed" from="Menu/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Menu/Quit" to="." method="_on_Quit_pressed"]
